@@ -1,7 +1,19 @@
-import "./index.css";
+import { Routes, Route } from "react-router";
+import { lazy } from "react";
 
-function App() {
-  return <>Home Page</>;
+import Home from "./pages/Home.tsx";
+
+const Auth = lazy(() => import("./pages/Auth.tsx"));
+
+import { Suspense } from "react";
+
+export default function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </Suspense>
+  );
 }
-
-export default App;
