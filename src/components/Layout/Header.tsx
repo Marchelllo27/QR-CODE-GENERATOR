@@ -1,8 +1,31 @@
+import { Link } from "react-router";
+import { QrCode } from "lucide-react";
+
+import Button from "../ui/button";
+
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 h-[var(--header-height)] w-full flex items-center justify-between px-10 bg-amber-50 z-50">
-      <div>Logo</div>
-      <nav>Nav</nav>
+    <header className="fixed top-0 h-[var(--header-height)] w-full flex items-center justify-between px-10 z-50">
+      <div className="flex gap-2 items-center">
+        <QrCode size={40} color="#f97316" />
+        <Link to="/" className="text-2xl">
+          InstaQR
+        </Link>
+      </div>
+      <nav>
+        <ul className="flex gap-2">
+          <li>
+            <Button variant="ghost" asChild>
+              <Link to="/auth">Sign In</Link>
+            </Button>
+          </li>
+          <li>
+            <Button asChild>
+              <Link to="/auth">Sign Up</Link>
+            </Button>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

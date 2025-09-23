@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router";
 import { lazy } from "react";
 
 import Home from "./pages/Home.tsx";
-import MainLayout from "./components/Layout/MainLayout.tsx";
+import MainLayout from "@/components/layout/MainLayout.tsx";
 
 const Auth = lazy(() => import("./pages/Auth.tsx"));
 

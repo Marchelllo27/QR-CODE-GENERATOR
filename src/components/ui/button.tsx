@@ -5,6 +5,10 @@ import { type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/helpers";
 import { buttonVariants } from "@/utils/constants";
 
+//When wrapping another tag with <Button asChild> <a>Link</a> </Button>, 
+// use "asChild" prop, to make it look like button but actualy render another tag.
+//to avoid for example render anchor tag inside a button, they are two clickable elements.
+
 function Button({
   className,
   variant,
@@ -20,4 +24,4 @@ function Button({
   return <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...props} />;
 }
 
-export { Button };
+export default Button;
