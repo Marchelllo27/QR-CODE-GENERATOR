@@ -5,13 +5,12 @@ import Button from "../ui/button";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 h-[var(--header-height)] w-full flex items-center justify-between px-10 z-50">
-      <div className="flex gap-2 items-center">
+    <header className="fixed top-0 h-[var(--header-height)] w-full flex items-center justify-between bg-white px-10 z-50">
+      <Link to="/" className="flex gap-2 items-center">
         <QrCode size={40} color="#f97316" />
-        <Link to="/" className="text-2xl">
-          InstaQR
-        </Link>
-      </div>
+        <span className="text-2xl font-medium">InstaQR</span>
+      </Link>
+
       <nav>
         <ul className="flex gap-2">
           <li>

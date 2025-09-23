@@ -11,7 +11,7 @@ export default function MainLayout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main className="flex min-h-[calc(100dvh-var(--header-height))] mt-[var(--header-height)] bg-amber-800">{children}</main>
+      <main className="flex flex-col min-h-[calc(100dvh-var(--header-height))] mt-[var(--header-height)] bg-amber-800">{children}</main>
       <Footer />
     </>
   );
